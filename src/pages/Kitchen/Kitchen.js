@@ -29,7 +29,7 @@ export const Kitchen = () => {
 
   useEffect(() => {
     ordersList();
-  }, []);
+  }, [token]);
 
   const handlePrepare = (order) => {
     const url = 'https://lab-api-bq.herokuapp.com/orders/';
