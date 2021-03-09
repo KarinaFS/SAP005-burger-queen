@@ -142,7 +142,7 @@ export const CreateOrder = () => {
     <>
       <Header />
         <h1>Criar Pedido</h1>
-        <div className="container">
+        <div className="container-order">
         <div className="div-input-order">
           <div className="col">
             <input type="text" className="form-control" placeholder="Cliente" aria-label="Cliente" onChange={handleClient}

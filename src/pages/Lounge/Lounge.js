@@ -38,9 +38,7 @@ export const Lounge = () => {
 
       </div>
   )
-  <div className="footer-lounge">
   <Footer />
-  </div>
     </>
   )
 
