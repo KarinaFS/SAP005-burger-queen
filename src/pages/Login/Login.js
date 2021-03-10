@@ -46,14 +46,14 @@ export const Login = () => {
     return (
         <div className="Login">
             <header>
-                <img src={logoburger} className="logoburger" alt="logoburger" />
+                <img src={logoburger} className="logoburger-login" alt="logoburger" />
                 <h1 className="h1-login">Acesse sua conta</h1>
             </header>
             <form className="form-login">
                 <input type="text" name="email" placeholder="E-mail" id="input-login" value={email} onChange={(event) => setEmail(event.target.value)} />
                 <input type="password" name="password" placeholder="Senha" id="input-password" value={password} onChange={(event) => setPassword(event.target.value)} />
                 <button type="submit" id="login-btn" onClick={LoginBtn}>Entrar</button>
-            <p>
+            <p className="p-login">
                 Não possui cadastro?
             <Link to='/Register'> Registre-se</Link>
             </p>

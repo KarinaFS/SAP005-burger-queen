@@ -19,6 +19,10 @@ body {
   margin-bottom: 50px;
 }
   
+.logoburger-login {
+  margin-top: 50px;
+}
+
 .Login, 
 .form-login {
   height: 100vh;
@@ -39,6 +43,12 @@ p, a {
   font-family: 'Nunito', sans-serif;
   color: white;
 }
+
+ @media (min-width: 900px) {
+  .p-login {
+    margin-bottom: 70px;
+  }
+} 
 
 #login-btn {
   border: solid 2px #fff;
