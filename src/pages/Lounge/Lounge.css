@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 .container { 
-  height: 45.5vh;
+  height: 45vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-
-/* @media (min-width: 900px) {
-  .container {
-    height: 30vh;
-  }
-} */
 
 .container-order { 
   height: auto;
@@ -32,7 +26,7 @@
   font-weight: bold;
   margin-left: 2em;
   margin-bottom: 100px;
-  font-size: 15pt;
+  font-size: 17pt;
 }
 
 .btn, #back-btn {
@@ -148,4 +142,8 @@ table {
 
 .table-ready {
   color: black;
+}
+
+.footer-lounge {
+  margin-top: 2em;
 }
