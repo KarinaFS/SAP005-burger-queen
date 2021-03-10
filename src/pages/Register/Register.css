@@ -10,6 +10,22 @@
   font-size: 20pt;  
 }
 
+@media (min-width: 900px) {
+  .container-register {
+    height: auto;
+  }
+} 
+
+.form-register {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+} 
+
+.h1-register {
+  margin-bottom: 50px;
+}
+
 input {
   border-radius: 50px;
   font-family: 'Nunito', sans-serif;

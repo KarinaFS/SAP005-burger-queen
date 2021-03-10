@@ -8,6 +8,12 @@
   align-items: center;
 }
 
+/* @media (min-width: 900px) {
+  .container {
+    height: 30vh;
+  }
+} */
+
 .container-order { 
   height: auto;
   display: flex;
@@ -41,6 +47,13 @@
   margin-bottom: 1em;
   margin-left: 5em;
   margin-right: 5em;
+}
+
+@media (min-width: 1200px) {
+  .btn {
+    margin-left: 200px; 
+    margin-right: 200px;
+  }
 }
 
 .add-btn, 

@@ -8,13 +8,19 @@ body {
   color: #899095;
 }
 
+@media (min-width: 900px) {
+  .Login {
+    height: auto;
+  }
+}
+
 .h1-login {
   color: #fff;
   margin-bottom: 50px;
 }
   
 .Login, 
-form {
+.form-login {
   height: 100vh;
   display: flex;
 	flex-direction: column;

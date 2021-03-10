@@ -26,3 +26,15 @@ h1 {
   margin-left: 650px; 
   cursor: pointer; 
 }
+
+@media (min-width: 900px) {
+  .signout-btn-two {
+    margin-left: 900px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .signout-btn-two {
+    margin-left: 1400px; 
+  }
+}

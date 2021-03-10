@@ -84,7 +84,7 @@ export const Register = () => {
         <img src={logoburger} className="logoburger" alt="logoburger" />
         <h1 className="h1-register">Crie seu cadastro</h1>
       </header>
-      <form>
+      <form className="form-register">
         <div className="Register">
           <input
             type='text'
