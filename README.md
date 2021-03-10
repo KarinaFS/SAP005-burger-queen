@@ -42,11 +42,14 @@ Lógica implementada em JavaScript (ES6 +), uso do [React](https://reactjs.org/)
 ### Definição do produto
 
  O Product Owner nos apresentou este backlog que é o resultado do seu trabalho com o cliente até hoje:
- - #### História de usuário
+ -  História de usuário
+
 ![historia-usuario](src/img/hu.png)
 
-#### Fluxo da aplicação
-- #### Fluxograma
+### Fluxo da aplicação
+
+- Fluxograma
+
 ![fluxograma](https://trello-attachments.s3.amazonaws.com/6023ebbadd2840507fb61d9e/715x593/61a839874520f4a293b8ff242f1f32f3/image.png)
 
 ### Protótipos
@@ -58,7 +61,7 @@ Lógica implementada em JavaScript (ES6 +), uso do [React](https://reactjs.org/)
 
 - Tela inicial do salão e do pedido(salão)
 
-![prototipo3-4(src/img/proto3-4.png)
+![prototipo3-4](src/img/proto3-4.png)
 
 - Tela de pedidos em preparo(salão) e pedidos prontos(cozinha)
 
@@ -66,7 +69,7 @@ Lógica implementada em JavaScript (ES6 +), uso do [React](https://reactjs.org/)
 
 Após os testes de usabilidade, foram feitas alterações no _layout_ e esquema de cores. Foi verificado a necessidade de deixar em algo parecido com o esquema [_Dark_ _Mode_](https://en.wikipedia.org/wiki/Light-on-dark_color_scheme) o que deixaria a aplicação menos cansativa aos olhos, ao decorrer de longos períodos de uso.
 
-### Versão final da aplicação
+### Versão final
 
 - Tela de Login e Cadastro
 
@@ -84,13 +87,13 @@ Após os testes de usabilidade, foram feitas alterações no _layout_ e esquema 
 
 ## ⚙️ Funcionalidades
 
-#### Criar perfil
+**Criar perfil**
 
 - [x] Poder realizar cadastro com e-mail, senha e função.
 - [x] Poder realizar login com e-mail e senha.
 - [x] Redirecionar para a tela correta.
 
-#### Anotar pedidos
+**Anotar pedidos**
 
 - [x] Digitar o nome do cliente e mesa.
 - [x] Filtrar _menu_ para _café da manhã_ e _almoço/jantar_.
@@ -99,20 +102,20 @@ Após os testes de usabilidade, foram feitas alterações no _layout_ e esquema 
 - [x] Mostrar _resumo_ do pedido com todos os itens e o total.
 - [x] Enviar para a cozinha (isso deve salvar o pedido).
 
-#### Ver pedidos na cozinha
+**Ver pedidos na cozinha**
 
 - [x] Visualizar pedidos pendentes para produção.
 - [x] Marcar pedido como pronto para entrega.
 - [x] Ver histórico dos pedidos.
 
-#### Entrega de pedidos
+**Entrega de pedidos**
 
 - [x] Visualizar pedidos pendentes para entrega.
 - [x] Marcar pedido como entregue ao cliente.
 
 ---
-## 🚀Para desenvolvedorxs
-#### Passo a passo
+## 🚀 Para desenvolvedorxs
+**Passo a passo**
 
 - Leia a documentação da [Burger Queen API](https://lab-api-bq.herokuapp.com/api-docs/).
 

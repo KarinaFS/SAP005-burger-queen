@@ -1,9 +1,27 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { useForm } from 'react-hook-form';
 import logoburger from '../../img/logoburger.png';
+import swal from 'sweetalert';
 import './Register.css'
 
 export const Register = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('')
+  const [role, setRole] = useState('')
+  const { register, handleSubmit, errors } = useForm();
+
+  const toRegisterAlert = () => {
+    swal({
+      title: 'Seja bem vindx!',
+      text: 'Cadastro efetuado com sucesso',
+      icon: 'success',
+      button: 'OK',
+      timer: '3000',
+    });
+  }
+
 
   const route = useHistory();
 
@@ -11,27 +29,13 @@ export const Register = () => {
     route.push('/')
   }
 
-  const loungeRoute = () => {
-    route.push('/Lounge')
-  }
-
-  const kitchenRoute = () => {
-    route.push('/Kitchen')
-  }
-
   function BackBtn(event) {
     event.preventDefault();
     loginRoute();
   }
 
-  const [name, setName] = useState('');
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('')
-  const [role, setRole] = useState('')
-
-  const handleName = (event) => {
-  
+  const handleName = (event) => {  
     setName(event.target.value);
   }
   const handleEmail = (event) => {
@@ -43,8 +47,8 @@ export const Register = () => {
   const handleRole = (event) => {
     setRole(event.target.value);
   };
-  const handleSubmit = (event) => {
-    event.preventDefault();
+
+  const onSubmit = () => {    
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -65,13 +69,9 @@ export const Register = () => {
 
     fetch("https://lab-api-bq.herokuapp.com/users", requestOptions)
       .then(response => response.json())
-      .then(result => {
-        if(result.role === "lounge") {
-          loungeRoute();
-        }
-        if(result.role === "kitchen") {
-          kitchenRoute();
-      }
+      .then(data => {
+        toRegisterAlert();
+        loginRoute();
        })
       .catch(error => alert('error', error));
   }
@@ -84,37 +84,47 @@ export const Register = () => {
         <img src={logoburger} className="logoburger" alt="logoburger" />
         <h1 className="h1-register">Crie seu cadastro</h1>
       </header>
-      <form>
+  
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="Register">
           <input
             type='text'
             name='name'
+            ref={register({
+              required: 'Digite seu nome',             
+            })} 
             placeholder='Seu nome'
             onChange={handleName}
             value={name}
-            required
           />
         </div>
         <div>
           <input
             type='email'
-            aria-describedby="emailHelp"
+            ref={register({
+              required: 'Digite seu e-mail',
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                message: 'Entre com um e-mail válido',
+              },
+            })}
+            aria-describedby="emailHelp"            
             name='email'
             placeholder='E-mail'
             value={email}
-            onChange={handleEmail}
-            required
+            onChange={handleEmail}            
           />
-          <div id="emailHelp" className="form-text"></div>
+                   
         </div>
         <div>
           <input
             type='password'
+            required
             name='password'
+            ref={register({ required: "Entre com a sua senha" })} 
             placeholder='Senha'
             value={password}
             onChange={handlePassword}
-            required
           />
         </div>
         <div>
@@ -122,7 +132,9 @@ export const Register = () => {
           <div className="form-check">
             <input className="form-check-input"
               type="radio"
+              required
               name="role"
+              ref={register()} 
               id="flexRadioDefault1"
               value='kitchen'
               onChange={handleRole}
@@ -134,7 +146,9 @@ export const Register = () => {
           <div className="form-check">
             <input className="form-check-input"
               type="radio"
+              required
               name="role"
+              ref={register()} 
               id="flexRadioDefault2"
               value='lounge'
               onChange={handleRole}
@@ -148,7 +162,7 @@ export const Register = () => {
           <button className="back-btn" onClick={BackBtn}>Voltar</ button>
           <button className='register-btn' type='submit' onClick={handleSubmit}>Cadastrar</button>
         </div>
-      </form>
+        </form>
     </div>
   )
 };
