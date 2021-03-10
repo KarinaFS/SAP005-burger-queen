@@ -13,6 +13,14 @@
 @media (min-width: 900px) {
   .container-register {
     height: auto;
+    font-size: 20pt;  
+  }
+} 
+
+@media (min-width: 900px) {
+  .h1-register {
+    padding-bottom: 30px;
+  
   }
 } 
 
