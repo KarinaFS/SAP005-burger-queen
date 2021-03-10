@@ -15,12 +15,13 @@
     height: auto;
     font-size: 20pt;  
   }
-} 
 
-@media (min-width: 900px) {
   .h1-register {
     padding-bottom: 30px;
-  
+  }
+
+  .logoburger-register {
+    padding-top: 30px;
   }
 } 
 
