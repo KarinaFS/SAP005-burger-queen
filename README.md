@@ -61,7 +61,7 @@ Lógica implementada em JavaScript (ES6 +), uso do [React](https://reactjs.org/)
 
 - Tela inicial do salão e do pedido(salão)
 
-![prototipo3-4(src/img/proto3-4.png)
+![prototipo3-4](src/img/proto3-4.png)
 
 - Tela de pedidos em preparo(salão) e pedidos prontos(cozinha)
 

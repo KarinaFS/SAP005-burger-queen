@@ -7,6 +7,7 @@ import './Kitchen.css';
 
 export const Kitchen = () => {
   let token = localStorage.getItem("token");
+  console.log('token',token)
   let name = localStorage.getItem('name');
 
   const [pendingOrders, setPendingOrders] = useState([])

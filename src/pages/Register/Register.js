@@ -2,10 +2,26 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import logoburger from '../../img/logoburger.png';
+import swal from 'sweetalert';
 import './Register.css'
 
 export const Register = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('')
+  const [role, setRole] = useState('')
   const { register, handleSubmit, errors } = useForm();
+
+  const toRegisterAlert = () => {
+    swal({
+      title: 'Seja bem vindx!',
+      text: 'Cadastro efetuado com sucesso',
+      icon: 'success',
+      button: 'OK',
+      timer: '3000',
+    });
+  }
+
 
   const route = useHistory();
 
@@ -13,23 +29,11 @@ export const Register = () => {
     route.push('/')
   }
 
-  const loungeRoute = () => {
-    route.push('/Lounge')
-  }
-
-  const kitchenRoute = () => {
-    route.push('/Kitchen')
-  }
-
   function BackBtn(event) {
     event.preventDefault();
     loginRoute();
   }
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('')
-  const [role, setRole] = useState('')
 
   const handleName = (event) => {  
     setName(event.target.value);
@@ -65,13 +69,9 @@ export const Register = () => {
 
     fetch("https://lab-api-bq.herokuapp.com/users", requestOptions)
       .then(response => response.json())
-      .then(result => {
-        if(result.role === "lounge") {
-          loungeRoute();
-        }
-        if(result.role === "kitchen") {
-          kitchenRoute();
-      }
+      .then(data => {
+        toRegisterAlert();
+        loginRoute();
        })
       .catch(error => alert('error', error));
   }
