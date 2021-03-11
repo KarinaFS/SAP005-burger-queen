@@ -5,18 +5,25 @@
 # Burger Nota 1000 
 
 Aplicação para a hamburgueria: "Burger Nota 1000", em que com o uso de um _tablet_ possibilita que seus funcionários do salão possa enviar os pedidos à cozinha para que sejam preparados de forma ordenada e eficiente.
-### :hamburger: Link para a aplicação
-[Burguer Nota 1000](https://burger-nota-1000.vercel.app/)
+### Link para a aplicação
+:hamburger: [Burguer Nota 1000](https://burger-nota-1000.vercel.app/)
 
-<p align="center">
- <a href="#-sobre-o-projeto">Sobre</a> • 
- <a href="#-tecnologias">Tecnologias</a> • 
- <a href="#-processo-de-design">Design</a> • 
- <a href="#-funcionalidades">Funcionalidades</a> •
- <a href="#-para-desenvolvedorxs">Como executar</a> • 
- <a href="#-para-desenvolvedores">Para desenvolvedores</a> • 
- <a href="#-autoras">Autoras</a>   
-</p>
+Tabela de conteúdos
+=================
+<!--ts-->
+   * [Sobre](#sobre-o-projeto)
+   * [Tecnologias](#tecnologias)
+   * [Design](#processo-de-design)
+      * [Definição do produto](#definição-do-produto)
+      * [Fluxo da Aplicação](#fluxo-da-aplicação)
+      * [Protótipos](#protótipos)
+      * [Versão final](#versão-final)
+   * [Funcionalidades](#funcionalidades)
+   * [Para desenvolvedorxs](#para-desenvolvedorxs)
+   * [Desenvolvido por](#deselvolvido-por)
+<!--te-->
+
+
 
 ---
 
@@ -35,41 +42,58 @@ Lógica implementada em JavaScript (ES6 +), uso do [React](https://reactjs.org/)
 ### Definição do produto
 
  O Product Owner nos apresentou este backlog que é o resultado do seu trabalho com o cliente até hoje:
- - #### História de usuário
+ -  História de usuário
+
 ![historia-usuario](src/img/hu.png)
 
-#### Fluxo da aplicação
-- #### Fluxograma
+### Fluxo da aplicação
+
+- Fluxograma
+
 ![fluxograma](https://trello-attachments.s3.amazonaws.com/6023ebbadd2840507fb61d9e/715x593/61a839874520f4a293b8ff242f1f32f3/image.png)
 
 ### Protótipos
-  Foram realizados protótipos no [Canva]() com o objetivo de realizar testes de usabilidade.
+  Foram realizados protótipos no [Canva](https://www.canva.com/) com o objetivo de realizar testes de usabilidade.
 
-- Tela de Login e Cadastro:
+- Tela de Login e Cadastro
+
 ![prototipo1-2](src/img/proto1-2.png)
 
-- Tela inicial do salão e do pedido(salão):
-![prototipo1-2](src/img/proto3-4.png)
+- Tela inicial do salão e do pedido(salão)
+
+![prototipo3-4](src/img/proto3-4.png)
 
 - Tela de pedidos em preparo(salão) e pedidos prontos(cozinha)
-![prototipo1-2](src/img/proto5-6.png)
+
+![prototipo5-6](src/img/proto5-6.png)
 
 Após os testes de usabilidade, foram feitas alterações no _layout_ e esquema de cores. Foi verificado a necessidade de deixar em algo parecido com o esquema [_Dark_ _Mode_](https://en.wikipedia.org/wiki/Light-on-dark_color_scheme) o que deixaria a aplicação menos cansativa aos olhos, ao decorrer de longos períodos de uso.
 
-### Versão final da aplicação
+### Versão final
 
+- Tela de Login e Cadastro
+
+![tela1-2](src/img/tela1-2.png)
+
+- Tela inicial do salão e do pedido(salão)
+
+![tela3-4](src/img/tela3-4.png)
+
+- Tela de pedidos em preparo(salão) e pedidos prontos(cozinha)
+
+![tela5-6](src/img/tela5-6.png)
 
 ---
 
 ## ⚙️ Funcionalidades
 
-#### Criar perfil
+**Criar perfil**
 
 - [x] Poder realizar cadastro com e-mail, senha e função.
 - [x] Poder realizar login com e-mail e senha.
 - [x] Redirecionar para a tela correta.
 
-#### Anotar pedidos
+**Anotar pedidos**
 
 - [x] Digitar o nome do cliente e mesa.
 - [x] Filtrar _menu_ para _café da manhã_ e _almoço/jantar_.
@@ -78,20 +102,20 @@ Após os testes de usabilidade, foram feitas alterações no _layout_ e esquema 
 - [x] Mostrar _resumo_ do pedido com todos os itens e o total.
 - [x] Enviar para a cozinha (isso deve salvar o pedido).
 
-#### Ver pedidos na cozinha
+**Ver pedidos na cozinha**
 
 - [x] Visualizar pedidos pendentes para produção.
 - [x] Marcar pedido como pronto para entrega.
 - [x] Ver histórico dos pedidos.
 
-#### Entrega de pedidos
+**Entrega de pedidos**
 
 - [x] Visualizar pedidos pendentes para entrega.
 - [x] Marcar pedido como entregue ao cliente.
 
 ---
-## 🚀Para desenvolvedorxs
-#### Passo a passo
+## 🚀 Para desenvolvedorxs
+**Passo a passo**
 
 - Leia a documentação da [Burger Queen API](https://lab-api-bq.herokuapp.com/api-docs/).
 

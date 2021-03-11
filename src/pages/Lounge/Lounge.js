@@ -6,8 +6,8 @@ import './Lounge.css'
 
 
 export const Lounge = () => {
-  const route = useHistory();
-
+  let name = localStorage.getItem('name');
+  const route = useHistory();  
   const orderRoute = () => {
     route.push('/CreateOrder')
   }
@@ -28,7 +28,7 @@ export const Lounge = () => {
   return (
     <>
       <SignOut />
-      <h1 className="h1-lounge">Bem-vindo(a)</h1>
+      <h1 className="h1-lounge">Bem-vindx, {name}!</h1>
       <div className="container">
 
         <div>
@@ -37,7 +37,7 @@ export const Lounge = () => {
         </div>
 
       </div>
-  )
+  
   <div className="footer-lounge">
   <Footer />
   </div>

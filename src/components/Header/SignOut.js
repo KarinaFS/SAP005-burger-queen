@@ -2,14 +2,21 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import logoburger from '../../img/logoburger.png';
 import '../../components/Header.css';
+import swal from 'sweetalert';
 
 const SignOut = () => {
     const route = useHistory();
-  
+
     const handleSignOut = () => {
-      alert('Usuário deslogado!');
-      localStorage.clear();
-      route.push('/');
+        swal({
+            title: 'Bom trabalho!',
+            text: 'Usuário deslogado.',
+            icon: 'success',
+            button: 'OK',
+            timer: '3000',
+        });
+        localStorage.clear();
+        route.push('/');
     };
 
     return (
