@@ -44,8 +44,7 @@ const Header = () => {
         <img src={logoburger} className="logoburger" alt="logoburger" />
       </header>
       <h1>Bem vindx, {name}!</h1>
-
-
+      <br></br>
     </>
 
   );

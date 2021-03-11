@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardTitle, CardText, CardGroup, Row, Col, Button } from 'reactstrap';
 import { useHistory } from 'react-router-dom';
+import  SignOut  from "../../components/Header/SignOut.js";
 import Footer from "../../components/Footer";
 import swal from 'sweetalert';
 import './Kitchen.css';
 
 export const Kitchen = () => {
   let token = localStorage.getItem("token");
-  console.log('token',token)
   let name = localStorage.getItem('name');
 
   const [pendingOrders, setPendingOrders] = useState([])
@@ -54,7 +54,7 @@ export const Kitchen = () => {
 
   useEffect(() => {
     ordersList();
-  }, []);
+  }, [token]);
 
   const handlePrepare = (order) => {
     const url = 'https://lab-api-bq.herokuapp.com/orders/';
@@ -108,10 +108,7 @@ export const Kitchen = () => {
     <>
       <div>
         <>
-          <svg onClick={handleSignOut} xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" className="signout-btn-kitchen">
-            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
-            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
-          </svg>
+          <SignOut />
           <h1 className="h1-kitchen">Bem vindx, {name}!</h1>
           <h1 className="h1-kitchen">Pedidos Pendentes</h1>
           {pendingOrders.map((order) => {

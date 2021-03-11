@@ -4,8 +4,14 @@ body {
   max-width: 100vw;
   max-height: 100vh;
   background-size: cover;
-  background-color: #212529;
+  background-color: #0D1117;
   color: #899095;
+}
+
+@media (min-width: 900px) {
+  .Login {
+    height: auto;
+  }
 }
 
 .h1-login {
@@ -13,8 +19,12 @@ body {
   margin-bottom: 50px;
 }
   
+.logoburger-login {
+  margin-top: 50px;
+}
+
 .Login, 
-form {
+.form-login {
   height: 100vh;
   display: flex;
 	flex-direction: column;
@@ -33,6 +43,12 @@ p, a {
   font-family: 'Nunito', sans-serif;
   color: white;
 }
+
+ @media (min-width: 900px) {
+  .p-login {
+    margin-bottom: 70px;
+  }
+} 
 
 #login-btn {
   border: solid 2px #fff;

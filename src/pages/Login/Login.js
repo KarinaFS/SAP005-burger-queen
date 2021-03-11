@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import logoburger from '../../img/logoburger.png';
+import { Alert } from 'reactstrap';
 import './Login.css';
 
 export const Login = () => {
@@ -11,7 +12,6 @@ export const Login = () => {
 
     const routes = useHistory();
 
-
     const loungeRoute = () => {
         routes.push('/Lounge')
     }
@@ -20,7 +20,7 @@ export const Login = () => {
         routes.push('/Kitchen')
     }
 
-    const onSubmit = () =>{
+    const onSubmit = () => {
 
         fetch('https://lab-api-bq.herokuapp.com/auth', {
             method: 'POST',
@@ -43,33 +43,32 @@ export const Login = () => {
                     kitchenRoute();
                 }
             })
-            .catch(() => {
-                alert('Email e/ou senha incorretos');
-            });
     }
 
     return (
         <div className="Login">
             <header>
-                <img src={logoburger} className="logoburger" alt="logoburger" />
+                <img src={logoburger} className="logoburger-login" alt="logoburger" />
                 <h1 className="h1-login">Acesse sua conta</h1>
             </header>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className="form-login" onSubmit={handleSubmit(onSubmit)}>
+            {errors.email && <Alert color="warning" className="error">{errors.email.message}</Alert>}
                 <input
                     type="email"
                     name="email"
                     ref={register({
                         required: 'Digite seu e-mail',
                         pattern: {
-                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                          message: 'Entre com um e-mail válido',
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                            message: 'Entre com um e-mail válido',
                         },
-                      })}
+                    })}
                     placeholder="E-mail"
                     id="input-login"
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                 />
+                {errors.password && <Alert color="warning" className="error">{errors.password.message}</Alert>}
                 <input
                     type="password"
                     name="password"
@@ -80,7 +79,7 @@ export const Login = () => {
                     onChange={(event) => setPassword(event.target.value)}
                 />
                 <button type="submit" id="login-btn" onClick={handleSubmit}>Entrar</button>
-                <p>
+                <p className="p-login">
                     Não possui cadastro?
                     <Link to='/Register'> Registre-se</Link>
                 </p>

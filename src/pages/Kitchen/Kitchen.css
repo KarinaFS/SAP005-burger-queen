@@ -6,4 +6,19 @@
     margin-top: 30px;
     color: white;
     margin-left: 650px;
+    cursor: pointer;
+}
+
+@media (min-width: 900px) {
+    .card-group {
+      margin-left: 50px; 
+      margin-right: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-group {
+        margin-left: 200px; 
+        margin-right: 200px;
+    }
 }

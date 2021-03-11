@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import logoburger from '../../img/logoburger.png';
 import swal from 'sweetalert';
+import { Alert } from 'reactstrap';
 import './Register.css'
 
 export const Register = () => {
@@ -81,12 +82,12 @@ export const Register = () => {
   return (
     <div className="container-register">
       <header>
-        <img src={logoburger} className="logoburger" alt="logoburger" />
+        <img src={logoburger} className="logoburger-register" alt="logoburger" />
         <h1 className="h1-register">Crie seu cadastro</h1>
       </header>
-  
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="form-register" onSubmit={handleSubmit(onSubmit)}>
         <div className="Register">
+          {errors.name && <Alert color="warning" className="error">{errors.name.message}</Alert>}
           <input
             type='text'
             name='name'
@@ -97,8 +98,10 @@ export const Register = () => {
             onChange={handleName}
             value={name}
           />
+
         </div>
         <div>
+          {errors.email && <Alert color="warning" className="error">{errors.email.message}</Alert>}
           <input
             type='email'
             ref={register({
@@ -117,11 +120,12 @@ export const Register = () => {
                    
         </div>
         <div>
+          {errors.password && <Alert color="warning" className="error">{errors.password.message}</Alert>}
           <input
             type='password'
             required
             name='password'
-            ref={register({ required: "Entre com a sua senha" })} 
+            ref={register({ required: "Crie uma senha" })} 
             placeholder='Senha'
             value={password}
             onChange={handlePassword}

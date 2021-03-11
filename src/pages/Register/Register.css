@@ -7,8 +7,29 @@
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-  font-size: 20pt;  
+  font-size: 17pt;  
 }
+
+@media (min-width: 900px) {
+  .container-register {
+    height: auto;
+    font-size: 20pt;  
+  }
+
+  .h1-register {
+    padding-bottom: 30px;
+  }
+
+  .logoburger-register {
+    padding-top: 30px;
+  }
+} 
+
+.form-register {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+} 
 
 input {
   border-radius: 50px;
@@ -34,8 +55,4 @@ input {
 .form-check, label, h1 {
 	font-family: 'Nunito', sans-serif;
   color: #fff
-}
-
-.logoburger {
-  margin-top: 30px;
 }

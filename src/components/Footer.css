@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-
-
-
-  p {
+.footer-text {
   text-align: center;
 	font-family: 'Nunito', sans-serif;
   font-weight: bold;
+  color: #000;
+  background-color: #ffdb49;
+  padding: 1rem 1rem;
+  letter-spacing: 1px;
 }
 
-.footer-link {
+
+footer a {
+  color: #000;
+  text-shadow: #fff 1px 1px 1px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
   text-decoration: none;
 }
 
-.footer-text {
-  padding-bottom: 40px;
+footer a:hover {
+  color: black;
+  text-shadow: #fff 1px 1px 0.5px;
 }

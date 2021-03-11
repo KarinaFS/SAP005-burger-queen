@@ -15,11 +15,26 @@ h1 {
 
 .signout-btn {
   color: white;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-right: 20px;
   cursor: pointer;
 }
 
+.signout-btn-two {
+  color: white;
+  margin-top: 30px;
+  margin-left: 650px; 
+  cursor: pointer; 
+}
 
+@media (min-width: 900px) {
+  .signout-btn-two {
+    margin-left: 900px; 
+  }
+}
 
-
+@media (min-width: 1200px) {
+  .signout-btn-two {
+    margin-left: 1400px; 
+  }
+}
