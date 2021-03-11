@@ -23,7 +23,6 @@ export const Register = () => {
     });
   }
 
-
   const route = useHistory();
 
   const loginRoute = () => {
@@ -34,7 +33,6 @@ export const Register = () => {
     event.preventDefault();
     loginRoute();
   }
-
 
   const handleName = (event) => {  
     setName(event.target.value);
@@ -77,8 +75,6 @@ export const Register = () => {
       .catch(error => alert('error', error));
   }
   
-
-
   return (
     <div className="container-register">
       <header>

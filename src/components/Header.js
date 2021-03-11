@@ -5,7 +5,8 @@ import swal from 'sweetalert';
 import './Header.css';
 
 const Header = () => {
-    let name = localStorage.getItem('name');
+    
+  let name = localStorage.getItem('name');
 
   const route = useHistory();
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardTitle, CardText, CardGroup, Row, Col, Button } from 'reactstrap';
-import { useHistory } from 'react-router-dom';
 import  SignOut  from "../../components/Header/SignOut.js";
 import Footer from "../../components/Footer";
 import swal from 'sweetalert';
@@ -94,14 +93,6 @@ export const Kitchen = () => {
         toReadyAlert();
       });
     });
-  };
-
-  const route = useHistory();
-
-  const handleSignOut = () => {
-    alert('Usuário deslogado');
-    localStorage.clear();
-    route.push('/');
   };
 
   return (
